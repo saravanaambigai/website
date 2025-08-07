@@ -1,16 +1,25 @@
+/* Base page style */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #f9f9f9;
+  padding: 0;
+  background-color: #fff9db; /* Soft, eye-friendly yellow */
 }
 
+/* Header section */
 header {
-  background-color: #004080;
+  background-color: #004080; /* Deep blue */
   color: white;
   padding: 20px;
   text-align: center;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Navigation links */
 nav {
   margin-top: 10px;
 }
@@ -26,14 +35,43 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* About and Form section box */
 .about, .form {
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
-  background-color: white;
+  background-color: white; /* White for contrast */
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
+/* Section headings */
+.about h2 {
+  color: #333;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.about h3 {
+  color: #004080;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.about h4 {
+  color: #444;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* Paragraphs */
+.about p {
+  line-height: 1.7;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Footer section */
 footer {
   background-color: #004080;
   color: white;
@@ -42,4 +80,22 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  font-size: 14px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .about, .form {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
 }
