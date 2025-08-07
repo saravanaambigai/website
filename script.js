@@ -22,31 +22,31 @@ if (scrollToTopBtn) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 }
-<script>
-  const revealElements = document.querySelectorAll('.scroll-reveal');
 
-  const revealOnScroll = () => {
-    const triggerBottom = window.innerHeight * 0.9;
+// Scroll reveal animation
+const revealElements = document.querySelectorAll('.scroll-reveal');
 
-    revealElements.forEach(el => {
-      const boxTop = el.getBoundingClientRect().top;
+const revealOnScroll = () => {
+  const triggerBottom = window.innerHeight * 0.9;
 
-      if (boxTop < triggerBottom) {
-        el.classList.add('visible');
-      }
-    });
-  };
+  revealElements.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
 
-  window.addEventListener('scroll', revealOnScroll);
-  window.addEventListener('load', revealOnScroll);
-</script>
-<script>
-  window.addEventListener('load', function () {
-    const preloader = document.getElementById('preloader');
+    if (boxTop < triggerBottom) {
+      el.classList.add('visible');
+    }
+  });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+
+// Preloader logic
+window.addEventListener('load', function () {
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
     preloader.style.opacity = '0';
     preloader.style.pointerEvents = 'none';
     setTimeout(() => preloader.style.display = 'none', 500);
-  });
-</script>
-
-
+  }
+});
