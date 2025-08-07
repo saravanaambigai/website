@@ -8,16 +8,31 @@ body {
 
 /* Header section */
 header {
-  background-color: white; /* Deep blue */
-  color: white;
+  background-color: white;
+  color: black;
   padding: 20px;
   text-align: center;
+  position: relative;
 }
 
+/* Logo support */
+.logo {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+/* Header title */
 header h1 {
   margin: 0;
   font-size: 24px;
   color: black;
+  padding-left: 70px;
 }
 
 /* Navigation links */
@@ -30,24 +45,25 @@ nav a {
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  display: inline-block;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* About and Form section box */
+/* Content section */
 .about, .form {
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
-  background-color: white; /* White for contrast */
+  background-color: white;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Section headings */
-.about h2 {
+.about h2, .form h2 {
   color: #333;
   font-size: 26px;
   margin-bottom: 20px;
@@ -65,40 +81,94 @@ nav a:hover {
   font-size: 18px;
 }
 
-/* Paragraphs */
-.about p {
+/* Paragraphs and list items */
+.about p,
+.about li,
+.form p {
   line-height: 1.7;
   font-size: 16px;
   color: #333;
 }
 
-/* Footer section */
+/* Footer */
 footer {
   background-color: #004080;
   color: white;
   text-align: center;
   padding: 15px;
+  font-size: 14px;
   position: fixed;
   bottom: 0;
   width: 100%;
-  font-size: 14px;
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  nav a {
-    display: block;
-    margin: 10px 0;
+/* ==========================
+   Responsive (Mobile view)
+   ========================== */
+@media (max-width: 768px) {
+  /* Adjust header */
+  header {
+    padding: 60px 15px 20px;
   }
 
-  .about, .form {
-    margin: 20px;
-    padding: 15px;
+  .logo {
+    position: static;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .logo img {
+    height: 50px;
   }
 
   header h1 {
     font-size: 20px;
+    padding-left: 0;
+  }
+
+  /* Navigation stacked */
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 6px 12px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* Main content */
+  .about, .form {
+    margin: 20px 15px;
+    padding: 15px;
+  }
+
+  .about h2, .form h2 {
+    font-size: 22px;
+  }
+
+  .about h3 {
+    font-size: 18px;
+  }
+
+  .about h4 {
+    font-size: 16px;
+  }
+
+  .about p,
+  .about li,
+  .form p {
+    font-size: 15px;
+  }
+
+  /* Footer won't cover content */
+  footer {
+    position: relative;
+    padding: 12px;
+    font-size: 13px;
   }
 }
-
-
