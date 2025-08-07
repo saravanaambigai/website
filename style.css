@@ -26,7 +26,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: black;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
@@ -100,4 +100,5 @@ footer {
     font-size: 20px;
   }
 }
+
 
