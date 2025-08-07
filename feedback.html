@@ -1,27 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Feedback Form</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feedback Form | Sri Bhogar Vaazhviyal Siddhantha Mayyam</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #004080;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button[type="submit"] {
+      padding: 12px;
+      background-color: #5e60ce;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 150px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #444cc6;
+    }
+
+    @media (max-width: 600px) {
+      button[type="submit"] {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Feedback Form</h1>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="Organization Logo" />
+      </a>
+      <div class="logo-text">
+        <p>Sri Bhogar Vaazhviyal Siddhantha Mayyam</p>
+        <p><em>“Awareness, Wisdom, and Wholeness in Life”</em></p>
+      </div>
+    </div>
+
+    <h1>Feedback</h1>
     <nav>
-      <a href="index.html">About Us</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="workshop.html">Workshop</a>
+      <a href="slogans.html">Slogans</a>
       <a href="feedback.html">Feedback</a>
       <a href="apply.html">Apply</a>
     </nav>
   </header>
 
   <section class="form">
-    <iframe src="YOUR_GOOGLE_FEEDBACK_FORM_URL" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <h2>Share Your Feedback</h2>
+    <p>We value your thoughts and suggestions. Please fill out the form below.</p>
+
+    <form action="#" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="rating">Overall Experience</label>
+      <select id="rating" name="rating" required>
+        <option value="">-- Select Rating --</option>
+        <option value="5">Excellent</option>
+        <option value="4">Very Good</option>
+        <option value="3">Good</option>
+        <option value="2">Fair</option>
+        <option value="1">Poor</option>
+      </select>
+
+      <label for="message">Your Comments</label>
+      <textarea id="message" name="message" placeholder="Write your feedback here..." required></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 [Organization Name]. All rights reserved.</p>
+    <p>&copy; 2025 Sri Bhogar Vaazhviyal Siddhantha Mayyam. All rights reserved.</p>
   </footer>
 </body>
 </html>
